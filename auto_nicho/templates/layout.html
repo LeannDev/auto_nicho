@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta -->
+	<title>{% block title %}{% endblock %} - BRANDING</title>
+	<meta name="description" content="{% block meta_description %}{% endblock %}" />
+	<meta name="robots" content="{% block meta_robots %}{% endblock %}" />
+	<link rel="canonical" href="https://site{% block canonical %}{% endblock %}" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="▷ {% block social_title %}{% endblock %}" />
+	<meta property="og:description" content="{% block social_description %}{% endblock %}" />
+	<meta property="og:url" content="https://site{% block social_url %}{% endblock %}" />
+	<meta property="og:site_name" content="{% block site_site_name %}{% endblock %}" />
+	<meta property="article:modified_time" content="{% block modified_time %}{% endblock %}" />
+	<meta property="og:image" content="https://site{% block social_img %}{% endblock %}" />
+	<meta property="og:image:width" content="861" />
+	<meta property="og:image:height" content="431" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@username" />
+    <meta name="twitter:title" content="▷ {% block twitter_title %}{% endblock %}" />
+    <meta name="twitter:description" content="{% block twitter_description %}{% endblock %}" />
+    <meta name="twitter:image" content="https://site{% block twitter_image %}{% endblock %}" />
+	<!-- / meta -->
+
+    <!-- icon -->
+    
+    <!-- /icon -->
+
+    <!-- CCS -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block css %}{% endblock %}
+
+    <!-- FONTS -->
+
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+    
+    <footer>
+        
+    </footer>
+    
+    <!-- JS -->
+    <script async defer src="{% static 'js/main.js' %}"></script>
+    {% block js %}{% endblock %}
+</body>
+</html>
