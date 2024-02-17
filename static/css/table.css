@@ -1,0 +1,110 @@
+.container-table {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.table {
+    width: 85%;
+    max-width: none;
+    margin-bottom: .5rem;
+    height: auto;
+    border-radius: 4px;
+    padding: .5rem;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.table a {
+    text-decoration: none;
+    color: #0711fc;
+}
+
+.table h4 {
+    font-size: 1.2rem;
+    overflow: hidden; /* El texto que no cabe dentro del contenedor se corta */
+    overflow-wrap: break-word; /* El texto largo se rompe para ajustarse al contenedor */
+}
+
+.table .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px #00ff7f solid;
+    display: flex;
+    margin: auto;
+}
+
+.table img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.table p {
+    font-weight: bold;
+}
+
+.table ul {
+    margin: 2rem 0;
+    padding: auto;
+    display: block;
+    text-align: start;
+    padding-left: .5rem;
+}
+
+.table ul li {
+    list-style-type: none;
+    margin: .5rem 0;
+}
+
+.table hr {
+    margin: 1rem 0;
+}
+
+.table .price {
+    color: #00ff7f;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.table .price sup {
+    color: #ff2600;
+}
+
+.table .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link_table {
+    height: 3rem;
+}
+
+.table_button {
+    padding: 1rem 3rem;
+    background-color: #00ff7f;
+    text-decoration: none;
+    color: #0711fc;
+    border-radius: .5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Desktop */
+@media screen and (min-width: 48rem) {
+    .table {
+        width: 20%;
+        height: calc(100vh - 50%);
+    }
+}

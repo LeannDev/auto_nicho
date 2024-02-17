@@ -1,0 +1,63 @@
+/* cluster category styles */
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link_category {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.category {
+    width: calc(50% - 2rem);
+    margin: .5rem;
+    border: 1px solid #0711fc;
+    border-radius: .5rem;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.category p, .category h2, .category h3 {
+    text-align: center;
+    background-color: #ffffff7a;
+    padding: 1rem 1rem;
+    margin: 0;
+}
+
+#category_1 {
+    background-image: url('/media/product_card/card_1.jpg');
+}
+
+#category_2 {
+    background-image: url('/media/product_card/card_2.jpg');
+}
+
+#category_3 {
+    background-image: url('/media/product_card/card_3.jpg');
+}
+
+#category_4 {
+    background-image: url('/media/product_card/card_4.jpg');
+}
+
+#category_5 {
+    background-image: url('/media/product_card/card_5.jpg');
+}
+
+#category_6 {
+    background-image: url('/media/product_card/card_6.jpg');
+}
+
+/* Desktop */
+@media screen and (min-width: 48rem) {
+    /* Category style */
+    .category {
+        width: calc(33.33% - 2rem);
+    }
+}

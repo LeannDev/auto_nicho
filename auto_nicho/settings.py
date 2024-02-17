@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -9,17 +11,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-orvom7man25i)m+1t)iuv7f-s!l0r%-(p+dx$cf_n@z@6v^4+e'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
-INSTALLED_APPS = [
+BASE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -27,6 +29,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+THIRD_APPS = [
+]
+
+LOCAL_APPS = [
+    'categories.apps.CategoriesConfig',
+    'subcategories.apps.SubcategoriesConfig',
+]
+
+INSTALLED_APPS = BASE_APPS + THIRD_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -41,11 +53,13 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'auto_nicho.urls'
 
 TEMPLATE_ROOT = os.path.join(BASE_DIR, 'auto_nicho/templates')
+TEMPLATE_CATEGORIES = os.path.join(BASE_DIR, 'categories/templates')
+TEMPLATE_SUBCATEGORIES = os.path.join(BASE_DIR, 'subcategories/templates')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_ROOT],
+        'DIRS': [TEMPLATE_ROOT, TEMPLATE_CATEGORIES, TEMPLATE_SUBCATEGORIES],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

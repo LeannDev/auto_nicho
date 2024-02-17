@@ -1,0 +1,113 @@
+/* products cards */
+
+.products-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0.5rem;
+    line-height: 1rem;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.products-card .img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px #00ff7f solid;
+    display: flex;
+    margin: auto;
+}
+
+.products-card img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+.description a {
+    text-decoration: none;
+    color: #0711fc;
+    font-size: 1.2rem;
+}
+
+.description h4, .description p {
+    text-align: center;
+}
+
+.description ul {
+    padding-left: .5rem;
+    list-style: none;
+}
+
+.description ul li {
+    text-align: start;
+}
+
+.products-card .description .price {
+    float: right;
+    text-align: center;
+}
+
+.products-card .description span {
+    color: #00ff7f;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.products-card .description div {
+    padding: .5rem;
+}
+
+.products-card .description ul li {
+    padding: .2rem 0;
+}
+
+.card_button {
+    padding: 1rem 3rem;
+    background-color: #00ff7f;
+    text-decoration: none;
+    color: #0711fc;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Desktop */
+@media screen and (min-width: 48rem) {
+    .product_card img {
+        max-width: 30%;
+    }
+
+    .products-card {
+        grid-template-columns: repeat(2, 40% 60%);
+    }
+
+    .description h4, .description p {
+        text-align: start;
+    }
+}
+
+
+/* @media screen and (max-width: 600px) {
+    .products-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .description h4, .description p {
+        text-align: center;
+    }
+
+    .description ul {
+        padding-left: .5rem;
+        list-style: none;
+    }
+
+    .description ul li {
+        text-align: start;
+    }
+} */

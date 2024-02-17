@@ -2,7 +2,7 @@ from django.views import View
 from django.shortcuts import render
 from django.contrib.sites.shortcuts import get_current_site
 
-class HomeView(View):
+class SubCategory1View(View):
 
     def get(self, request):
 
@@ -22,9 +22,9 @@ class HomeView(View):
             'image': image,
         }
 
-        return render(request, 'home.html', context)
+        return render(request, 'subcategory_1.html', context)
     
-class AboutUsView(View):
+class SubCategory2View(View):
 
     def get(self, request):
 
@@ -44,9 +44,10 @@ class AboutUsView(View):
             'image': image,
         }
 
-        return render(request, 'about_us.html', context)
+        return render(request, 'subcategory_2.html', context)
     
-class CookiesView(View):
+# Category #2
+class SubCategory2IView(View):
 
     def get(self, request):
 
@@ -66,9 +67,9 @@ class CookiesView(View):
             'image': image,
         }
 
-        return render(request, 'politics/cookies.html', context)
+        return render(request, 'subcategory_2I.html', context)
     
-class LegalView(View):
+class SubCategory2IIView(View):
 
     def get(self, request):
 
@@ -88,26 +89,4 @@ class LegalView(View):
             'image': image,
         }
 
-        return render(request, 'politics/legal.html', context)
-    
-class PrivacyView(View):
-
-    def get(self, request):
-
-        current_site = get_current_site(request) # get current site
-        title = 'mi titulo'
-        meta_description = 'mi meta description'
-        social_title = title
-        social_description = meta_description,
-        image = '/image.webp'
-
-        context = {
-            'site': current_site,
-            'title': title,
-            'meta_description': meta_description,
-            'social_title': social_title,
-            'social_description': social_description,
-            'image': image,
-        }
-
-        return render(request, 'politics/privacy.html', context)
+        return render(request, 'subcategory_2II.html', context)

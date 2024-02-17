@@ -1,54 +1,229 @@
 {% extends "layout.html" %}
 {% load static %}
 
-{% block title %}Home{% endblock %}
-{% block meta_description %}descripción{% endblock %}
+{% block title %}{{title}}{% endblock %}
+{% block meta_description %}{{meta_description}}{% endblock %}
 {% block meta_robots %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endblock %}
-{% block canonical %}/{% endblock %}
-{% block social_title %}Titulo{% endblock %}
-{% block social_description %}descripción{% endblock %}
-{% block social_url %}/{% endblock %}
-{% block site_site_name %}site{% endblock %}
+{% block canonical %}{% url 'home' %}{% endblock %}
+{% block social_title %}{{social_title}}{% endblock %}
+{% block social_description %}{{social_description}}{% endblock %}
+{% block social_url %}{% url 'home' %}{% endblock %}
+{% block site_site_name %}{{site}}{% endblock %}
 {% block modified_time %}{% endblock %}
-{% block social_img %}{% endblock %}
-{% block twitter_title %}Titulo{% endblock %}
-{% block twitter_description %}descripción{% endblock %}
+{% block social_img %}{{image}}{% endblock %}
+{% block twitter_title %}{{title}}{% endblock %}
+{% block twitter_description %}{{social_description}}{% endblock %}
 {% block twitter_image %}{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/cluster.css' %}">
+<link rel="stylesheet" href="{% static 'css/product_card.css' %}">
 {% endblock %}
 {% block content %}
-    <h1>HELLO WORLD</h1>
+    <h1>specialized store</h1>
 
-    <section id="category1" class="category">
-        <h2>Category 1</h2>
-        <!-- Contenido de la Category 1 -->
-    </section>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate quo natus at omnis. Repellat cupiditate ipsam quibusdam esse nostrum, necessitatibus id dolore temporibus quaerat quam quis beatae officia a.
+    </p>
 
-    <section id="category2" class="category">
-        <h2>Category 2</h2>
-        <!-- Contenido de la Category 2 -->
-    </section>
+    <div class="cluster">
+        <section id="category_1" class="category">
+            <a href="{% url 'category-1' %}" class="link_category">
+                <h2>Category 1</h2>
+                <p>Category description. lorem Lorem, ipsum dolor.</p>
+            </a>
+        </section>
+    
+        <section id="category_2" class="category">
+            <a href="{% url 'category-2' %}" class="link_category">
+                <h2>Category 2</h2>
+                <p>Category description. Lorem ipsum dolor sit.</p>
+            </a>
+        </section>
+    
+        <section id="category_3" class="category">
+            <a href="#" class="link_category">
+                <h2>Category 3</h2>
+                <p>Category description. Lorem ipsum dolor sit amet consectetur.</p>
+            </a>
+        </section>
+    
+        <section id="category_4" class="category">
+            <a href="#" class="link_category">
+                <h2>Category 4</h2>
+                <p>Category description. Lorem ipsum dolor sit.</p>
+            </a>
+        </section>
+    
+        <section id="category_5" class="category">
+            <a href="#" class="link_category">
+                <h2>Category 5</h2>
+                <p>Category description. Lorem ipsum dolor sit amet.</p>
+            </a>
+        </section>
+    
+        <section id="category_6" class="category">
+            <a href="#" class="link_category">
+                <h2>Category 6</h2>
+                <p>Category description. Lorem ipsum dolor sit.</p>
+            </a>
+        </section>
+    </div>
 
-    <section id="category3" class="category">
-        <h2>Category 3</h2>
-        <!-- Contenido de la Category 3 -->
-    </section>
+    <div class="best-product">
+        <h2>best seller #1</h2>
 
-    <section id="category4" class="category">
-        <h2>Category 4</h2>
-        <!-- Contenido de la Category 4 -->
-    </section>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa repellendus repellat nulla sit ipsam tenetur ratione impedit dolores perferendis inventore tempora iusto, delectus odio molestias laborum? Voluptate nostrum minus consequuntur, dolore itaque sapiente sint ab voluptatum molestiae praesentium. Aliquam odio commodi blanditiis cupiditate. Mollitia, cum quaerat veritatis doloribus eius hic.
+        </p>
 
-    <section id="category5" class="category">
-        <h2>Category 5</h2>
-        <!-- Contenido de la Category 5 -->
-    </section>
+        <div class="products-card">
+            
+            <div class="img">
+                <img loading="lazy" src="/media/main/no-fotos.png" alt="">
+            </div>
+            
+            <div class="description">
+                <h4>
+                    <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                    product
+                    </a>
+                </h4>
 
-    <section id="category6" class="category">
-        <h2>Category 6</h2>
-        <!-- Contenido de la Category 6 -->
-    </section>
+                <p>Características técnicas del cargador:</p>
+
+                <ul>
+                    
+                    <li><b>Tensión:</b> Lorem, ipsum dolor.</li>
+                
+                    <li><b>Potencia:</b> Lorem ipsum dolor sit.</li>
+                
+                    <li><b>Intensidad:</b> Lorem, ipsum.</li>
+                
+                    <li><b>Corriente:</b> Lorem ipsum dolor sit amet.</li>
+                
+                    <li><b>Conector de carga disponible:</b> Lorem ipsum dolor sit amet consectetur.</li>
+                
+                    <li><b>Largo del cable:</b> Lorem, ipsum dolor.</li>
+                    
+                </ul>
+
+                <div class="price">
+
+                    <div>
+                        <span>150.50 € <sup><del>299.99 €</del></sup></span>
+                    </div>
+                    <br>
+                    <div>
+                        <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow" class="card_button">Mas detalles</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h2>best seller #2</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam laboriosam quis explicabo! Tenetur doloremque rerum adipisci repellendus deserunt voluptate provident praesentium modi hic cupiditate iusto neque, ad quas quasi qui magnam ipsam similique molestias, odio quo eveniet fugiat consectetur excepturi. Unde eligendi tempore eius voluptates molestiae, officiis voluptate eos modi.
+        </p>
+
+        <div class="products-card">
+            
+            <div class="img">
+                <img loading="lazy" src="/media/main/no-fotos.png" alt="">
+            </div>
+            
+            <div class="description">
+                <h4>
+                    <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                    product
+                    </a>
+                </h4>
+
+                <p>Características técnicas del cargador:</p>
+
+                <ul>
+                    
+                    <li><b>Tensión:</b> Lorem, ipsum dolor.</li>
+                
+                    <li><b>Potencia:</b> Lorem ipsum dolor sit.</li>
+                
+                    <li><b>Intensidad:</b> Lorem, ipsum.</li>
+                
+                    <li><b>Corriente:</b> Lorem ipsum dolor sit amet.</li>
+                
+                    <li><b>Conector de carga disponible:</b> Lorem ipsum dolor sit amet consectetur.</li>
+                
+                    <li><b>Largo del cable:</b> Lorem, ipsum dolor.</li>
+                    
+                </ul>
+
+                <div class="price">
+
+                    <div>
+                        <span>150.50 € <sup><del>299.99 €</del></sup></span>
+                    </div>
+                    <br>
+                    <div>
+                        <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow" class="card_button">Mas detalles</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h2>best seller #3</h2>
+
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic rerum laboriosam suscipit enim esse, ipsam ad laborum ratione magni facilis eveniet, aliquam, vitae earum! Fugiat eum aperiam maxime excepturi pariatur, possimus eaque veritatis provident nemo dolores voluptas, doloremque iure eveniet minus ipsum quaerat. Asperiores vero veniam modi possimus ipsam eveniet?
+        </p>
+    
+        <div class="products-card">
+            
+            <div class="img">
+                <img loading="lazy" src="/media/main/no-fotos.png" alt="">
+            </div>
+            
+            <div class="description">
+                <h4>
+                    <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow">
+                    product
+                    </a>
+                </h4>
+
+                <p>Características técnicas del cargador:</p>
+
+                <ul>
+                    
+                    <li><b>Tensión:</b> Lorem, ipsum dolor.</li>
+                
+                    <li><b>Potencia:</b> Lorem ipsum dolor sit.</li>
+                
+                    <li><b>Intensidad:</b> Lorem, ipsum.</li>
+                
+                    <li><b>Corriente:</b> Lorem ipsum dolor sit amet.</li>
+                
+                    <li><b>Conector de carga disponible:</b> Lorem ipsum dolor sit amet consectetur.</li>
+                
+                    <li><b>Largo del cable:</b> Lorem, ipsum dolor.</li>
+                    
+                </ul>
+
+                <div class="price">
+
+                    <div>
+                        <span>150.50 € <sup><del>299.99 €</del></sup></span>
+                    </div>
+                    <br>
+                    <div>
+                        <a id="ASIN" href="#" target="_blank" rel="noopener noreferrer nofollow" class="card_button">Mas detalles</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}

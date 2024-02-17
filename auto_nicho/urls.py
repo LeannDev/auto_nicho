@@ -3,10 +3,15 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from .views import HomeView
+from .views import HomeView, AboutUsView, CookiesView, LegalView, PrivacyView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
+    path('', include('categories.urls')),
+    path('about-us/', AboutUsView.as_view(), name='about-us'),
+    path('cookies/', CookiesView.as_view(), name='cookies'),
+    path('legal/', LegalView.as_view(), name='legal'),
+    path('privacy/', PrivacyView.as_view(), name='privacy'),
     path('admin/', admin.site.urls),
 ]
 

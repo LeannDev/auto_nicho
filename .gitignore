@@ -4,6 +4,7 @@ venv/
 # Compiled Python files
 *.pyc
 __pycache__/
+__MACOSX/
 
 # Django settings
 *.secret_key
@@ -20,13 +21,20 @@ __pycache__/
 *.swp
 
 # Static files (collected static)
-#static/
+# static/
 
 # Media files (user-uploaded content)
-media/
+# media/
 
 # Environment variables
 .env
 
 # Database
 db.sqlite3
+
+# API Keys
+*.api
+
+# Folders
+paapi5-code-snippets/
+paapi5-example/
